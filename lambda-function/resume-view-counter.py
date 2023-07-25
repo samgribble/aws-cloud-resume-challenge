@@ -18,4 +18,12 @@ def lambda_handler(event, context):
             'Views': new_views
         })
         
-        return new_views
+        # Prepare and return the response with the necessary CORS headers
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Access-Control-Allow-Origin': 'https://resume.sgribble.com',
+                'Access-Control-Allow-Credentials': 'true'
+            },
+            'body': json.dumps(int(new_views)),
+        }
