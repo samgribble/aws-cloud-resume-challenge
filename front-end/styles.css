@@ -49,3 +49,10 @@ body {
 .skills ul li, .experience ul li {
     margin-bottom: 10px;
 }
+
+.counter {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
